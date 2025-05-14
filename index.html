@@ -5,10 +5,12 @@
   <title>shelterDAO</title>
 	<style>
 		@media only screen and (max-width: 1080px) {
-		  td {display: block;	max-width: 700px; overflow: hidden;}
+		  td {display: block;	max-width: 700px; font-size: 80px;}
 			th {display: none;}
 			.head {font-weight: bold;}
 			.foot {margin-bottom: 20px;}
+			button {font-size: 80px;}
+			h1 {font-size: 80px;}
 		}
 		table {border-collapse: collapse;}
 		td, th {border: 2px #DDD solid; padding: 2px; cursor: pointer; text-overflow: ellipsis;}
@@ -19,17 +21,13 @@
 	<button id="connect_button" href="#">CONNECT</button>
 	<h1><i>shelter</i>DAO </h1>
   <div id="forMembers" style="display:none">
-    <button id="send_eth">SEND ETH</button>
-		<button id="left" style="display:none"><</button>
-		<button id="right">></button>
-		<div id="contract" style="display:none">
-			<button id="add_member">ADD MEMBER</button>
-			<button id="remove_member">REMOVE MEMBER</button>
-			<button id="change_voting_rules">NEW VOTING RULES</button>
+		<div id="proposal_buttons">
+    	<button id="send_eth">SEND ETH</button>
+			<button id="show_fns">></button>
 		</div>
 		<br><br>
 		<table>
-		  <tr><th>PROPOSAL NUMBER</th><th>RECIPIENT</th><th>AMOUNT ETH</th><th>JOB DESCRIPTION</th><th>TOTAL VOTES</th><th>PROGRESSIVE VOTE</th><th>STATUS</th></tr>
+		  <tr><th>PROPOSAL</th><th>RECIPIENT</th><th>AMOUNT ETH</th><th>DESCRIPTION</th><th>TOTAL VOTES</th><th>PROG VOTE</th><th>ACTION</th></tr>
 	    <tbody id="activeProposals"></tbody>
 		</table>
 	</div>
